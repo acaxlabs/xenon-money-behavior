@@ -24,7 +24,7 @@
   "homepage": "https://github.com/acaxlabs/xenon-money-behavior",
   "ignore": [],
     "dependencies": {
-        "polymer": "Polymer/polymer#^1.7.1"
+        "polymer": "Polymer/polymer#^1.2.0"
     },
      "devDependencies": {
   }
