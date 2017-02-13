@@ -1,0 +1,32 @@
+﻿<link rel="import" href="../polymer/polymer.html">
+
+
+<script>
+    window.ACAXLabs = window.ACAXLabs || {} ;
+    ACAXLabs.XenonMoneyBehavior = {
+        formatMoney: function (val, useCents) {
+            useCents = useCents === undefined ? true : useCents;
+            var value = Number(val).toFixed(2).replace(/[^0-9]/g, "");
+            if (useCents) {
+                // remove all incoming non-numeric characters and add $ sign
+                return "$ " + this._computeWithCents(value);
+            }
+            return "$ " + this._computeWithoutCents(value);
+
+        },
+        _computeWithCents: function (val) {
+
+            var end = "." + val.substr(-2);
+            if (end[0] == "," || end[end.length - 1] == ".") end = end.replace(/[^0-9]/g, "");
+            var start = this._computeWithoutCents(val.slice(0, -2));
+            return (start + end);
+        },
+        _computeWithoutCents: function (val) {
+            var end = "," + val.substr(-3);
+            var start = val.slice(0, -3);
+            val = start + end;
+            if (val[0] == "," || val[val.length - 1] == ",") val = val.replace(/[^0-9]/g, "");
+            return val;
+        },
+    }
+</script>

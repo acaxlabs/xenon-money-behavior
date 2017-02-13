@@ -1,0 +1,31 @@
+{
+  "name": "xenon-money-behavior",
+  "version": "1.0",
+  "description": "formats a number to USD currency",
+  "authors": [
+    "ACA[X]Labs"
+  ],
+  "keywords": [
+    "web-components",
+    "polymer",
+    "currency",
+    "numeric",
+    "input",
+    "pattern",
+    "regex"
+  ],
+  "main": "xenon-money-behavior.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/acaxlabs/xenon-money-behavior.git"
+  },
+  "license": "https://github.com/acaxlabs/xenon-money-behavior/blob/master/LICENSE.txt",
+  "homepage": "https://github.com/acaxlabs/xenon-money-behavior",
+  "ignore": [],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^1.7.1"
+    },
+     "devDependencies": {
+  }
+}
