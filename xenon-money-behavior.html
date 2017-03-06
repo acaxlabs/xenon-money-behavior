@@ -2,7 +2,7 @@
 <script>
     window.ACAXLabs = window.ACAXLabs || {} ;
     ACAXLabs.XenonMoneyBehavior = {
-        formatMoney = function (val, showCents) {
+        formatMoney: function (val, showCents) {
             if(val===undefined || val==null || val==="") return 'none';
             var num = Number(val).toFixed(2);
             if(num.indexOf('e') != -1) return num;
@@ -12,6 +12,6 @@
                 pos += 4;
             }
             return "$" + ((showCents) ? num : num.substr(0, num.length-3));
-        };
-    };
+        }
+    }
 </script>
