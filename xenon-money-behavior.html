@@ -3,15 +3,15 @@
     window.ACAXLabs = window.ACAXLabs || {} ;
     ACAXLabs.XenonMoneyBehavior = {
         formatMoney: function (val, showCents) {
-            if(val===undefined || val==null || val==="") return 'none';
-            var num = Number(val).toFixed(2);
+            if(val===undefined || val==null || val==="") return "";
+            var num = Number(val.toString().replace(/[^0-9\.]/g, "")).toFixed(2);
             if(num.indexOf('e') != -1) return num;
             var pos = 6;
             while(pos < num.length) {
                 num = num.substr(0,num.length - pos) + ',' + num.substr(num.length - pos);
                 pos += 4;
             }
-            return "$" + ((showCents) ? num : num.substr(0, num.length-3));
+            return ((showCents) ? num : num.substr(0, num.length-3));
         }
     }
 </script>
